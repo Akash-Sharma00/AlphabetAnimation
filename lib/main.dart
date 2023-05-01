@@ -1,3 +1,4 @@
+import 'package:dancing_text/animatio_type_1.dart';
 import 'package:dancing_text/animation_type_2.dart';
 import 'package:flutter/material.dart';
 
@@ -11,34 +12,110 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
-          body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          AnimationTypeTwo(
-            text: "Flutter",
-            animationSync: AnimationSync.oneByOne,
-            duration: Duration(milliseconds: 500),
-            repeat: false,
-          ),
-          AnimationTypeTwo(
-            text: "Flutter",
-            animationSync: AnimationSync.flip,
-            textStyle: TextStyle(letterSpacing: 100),
-            duration: Duration(milliseconds: 500),
-            repeat: false,
-          ),
-          AnimationTypeTwo(
-            text: "Flutter",
-            animationSync: AnimationSync.flow,
-            textStyle: TextStyle(letterSpacing: 50),
-            duration: Duration(milliseconds: 500),
-          ),
-          AnimationTypeTwo(
-            text: "Flutter",
-            animationSync: AnimationSync.oneByOne,
-            duration: Duration(milliseconds: 500),
-          ),
-        ],
+          body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            AnimationTypeOne(
+              text: "Flutter",
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeOne(
+              text: "Flutter",
+              animaTionType: AnimationType.byXAxis,
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeOne(
+              text: "Flutter",
+              animaTionType: AnimationType.byYAxis,
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeOne(
+              text: "Flutter",
+              animaTionType: AnimationType.pendulum,
+              duration: Duration(seconds: 200),
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeOne(
+              text: "Flutter",
+              animaTionType: AnimationType.scaleUp,
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 5,
+                  letterSpacing: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeTwo(
+              text: "Flutter",
+              animationSync: AnimationSync.oneByOne,
+              duration: Duration(milliseconds: 500),
+              repeat: true,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeTwo(
+              text: "Flutter",
+              animationSync: AnimationSync.flip,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+              duration: Duration(milliseconds: 500),
+              repeat: true,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AnimationTypeTwo(
+              text: "Flutter",
+              animationSync: AnimationSync.flow,
+              textStyle: TextStyle(
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+              duration: Duration(milliseconds: 500),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
       )),
     );
   }

@@ -5,19 +5,19 @@ enum AnimationType { byXAxis, byYAxis, byZAxis, pendulum, scaleUp }
 
 class AnimationTypeOne extends StatefulWidget {
   final String text;
-  final TextStyle? style;
+  final TextStyle? textStyle;
   final Duration? duration;
   final bool repeat;
   final Alignment alignment;
-  final AnimationType rotateByAxis;
+  final AnimationType animaTionType;
   const AnimationTypeOne(
       {super.key,
-        required this.text,
-        this.style,
-        this.duration,
-        this.alignment = Alignment.center,
-        this.repeat = false,
-        this.rotateByAxis = AnimationType.byZAxis});
+      required this.text,
+      this.textStyle,
+      this.duration,
+      this.alignment = Alignment.center,
+      this.repeat = false,
+      this.animaTionType = AnimationType.byZAxis});
 
   @override
   State<AnimationTypeOne> createState() => _AnimationTypeOneState();
@@ -61,8 +61,8 @@ class _AnimationTypeOneState extends State<AnimationTypeOne>
               animation: _animation,
               alignment: widget.alignment,
               text: textList[i],
-              style: widget.style,
-              rotateByAxis: widget.rotateByAxis,
+              style: widget.textStyle,
+              rotateByAxis: widget.animaTionType,
             ),
         ],
       ),
@@ -122,7 +122,7 @@ class AnimatedTextComponent extends StatelessWidget {
         return Matrix4.identity()..rotateZ(_controller.value * 2 * math.pi);
 
       case AnimationType.scaleUp:
-        return Matrix4.identity()..scale(_controller.value);
+        return Matrix4.identity()..scale(_controller.value * 2 * math.pi);
 
       case AnimationType.pendulum:
         return Matrix4.identity()
