@@ -9,7 +9,7 @@ class AnimationTypeOne extends StatefulWidget {
   final Duration? duration;
   final bool repeat;
   final Alignment alignment;
-  final AnimationType animaTionType;
+  final AnimationType animationType;
   const AnimationTypeOne(
       {super.key,
       required this.text,
@@ -17,7 +17,7 @@ class AnimationTypeOne extends StatefulWidget {
       this.duration,
       this.alignment = Alignment.center,
       this.repeat = false,
-      this.animaTionType = AnimationType.byZAxis});
+      this.animationType = AnimationType.byZAxis});
 
   @override
   State<AnimationTypeOne> createState() => _AnimationTypeOneState();
@@ -62,7 +62,7 @@ class _AnimationTypeOneState extends State<AnimationTypeOne>
               alignment: widget.alignment,
               text: textList[i],
               style: widget.textStyle,
-              rotateByAxis: widget.animaTionType,
+              rotateByAxis: widget.animationType,
             ),
         ],
       ),

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
             ),
             AnimationTypeOne(
               text: "Flutter",
-              animaTionType: AnimationType.byXAxis,
+              animationType: AnimationType.byXAxis,
               repeat: true,
               textStyle: TextStyle(
                   color: Colors.green,
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
             ),
             AnimationTypeOne(
               text: "Flutter",
-              animaTionType: AnimationType.byYAxis,
+              animationType: AnimationType.byYAxis,
               repeat: true,
               textStyle: TextStyle(
                   color: Colors.green,
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
             ),
             AnimationTypeOne(
               text: "Flutter",
-              animaTionType: AnimationType.pendulum,
+              animationType: AnimationType.pendulum,
               duration: Duration(seconds: 200),
               repeat: true,
               textStyle: TextStyle(
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
             ),
             AnimationTypeOne(
               text: "Flutter",
-              animaTionType: AnimationType.scaleUp,
+              animationType: AnimationType.scaleUp,
               repeat: true,
               textStyle: TextStyle(
                   color: Colors.green,
