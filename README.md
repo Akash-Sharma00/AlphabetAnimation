@@ -1,15 +1,4 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
 <center>
 <font size = 5>Alphabet Animation</font>
 </center>
@@ -22,17 +11,18 @@ Intro: Alphabet Animation is help flutter developer to animate every single alph
     Add this to your package's pubspec.yaml file:
     ```yaml
     dependencies:
-        alphabet_animation: ^0.0.1
+        alphabet_animation: ^0.0.4
     ```
 2. Install it:<br>
     You can run command in terminal
      ```
-    flutter pub get alphabet_animation
+    flutter pub add alphabet_animation
     ```
 3. Import it<br>
     To import add to your desire file
      ```dart
-    import 'package:alphabet_animation/packages.dart';
+    import 'package:alphabet_animation/alphabet_animation.dart';
+
     ```
 
 ## Usage
@@ -66,6 +56,36 @@ Alphabet Animation is statefula package which create animation for text. include
 
 
 ## About
+
+- Preview
+<br>
+![alt text](https://raw.githubusercontent.com/Akash-Sharma00/gifs-images/main/Alphbat%20animation/gif%20one.gif)
+
+```
+AnimationTypeOne(
+    text: "Flutter",
+    repeat: true,
+    textStyle: TextStyle(
+        color: Colors.green,
+        fontSize: 35,
+        fontWeight: FontWeight.bold),
+),
+```
+![alt text](https://raw.githubusercontent.com/Akash-Sharma00/gifs-images/main/Alphbat%20animation/gif%202.gif)
+
+```
+ AnimationTypeTwo(
+    text: "Flutter",
+    animationSync: AnimationSync.flip,
+    duration: Duration(milliseconds: 500),
+    repeat: false,
+    textStyle: TextStyle(
+        color: Colors.green,
+        fontSize: 35,
+        fontWeight: FontWeight.bold),
+),
+```
+![alt text](https://raw.githubusercontent.com/Akash-Sharma00/gifs-images/main/Alphbat%20animation/gif%203.gif)
 
 It has properties to explore<br>
 In AnimationTypeOne
