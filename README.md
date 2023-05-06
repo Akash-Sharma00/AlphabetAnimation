@@ -58,7 +58,6 @@ Alphabet Animation is statefula package which create animation for text. include
 ## About
 
 - Preview
-<br>
 ![alt text](https://raw.githubusercontent.com/Akash-Sharma00/gifs-images/main/Alphbat%20animation/gif%20one.gif)
 
 ```
